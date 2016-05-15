@@ -1,9 +1,10 @@
 /**
  * We load mongoose
  */
+var DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/zyloon';
 var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-autoinc');
-var connection = mongoose.connect('mongodb://127.0.0.1:27017/zyloon');
+var connection = mongoose.connect(DB_URL);
 
 /**
  * We check if the connection is ok
