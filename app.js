@@ -5,6 +5,7 @@ var glob = require('glob');
 
 var app = express();
 var DB_URL = process.env.DB_URL || 'localhost/zyloon';
+var PORT = process.env.PORT || 3000;
 
 function createExpressApp() {
   async.series([
@@ -67,8 +68,8 @@ function _requireRoutes(next) {
 }
 
 function _startListening(next) {
-  app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+  app.listen(PORT, function () {
+    console.log('Example app listening on port ' + PORT);
     return next();
   });
 }
