@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app= "zyloonApp">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>Expense</title>
+    <link rel="stylesheet"
+    	href="../../bower_components/chartist/dist/chartist.min.css">
+    
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/chartist/dist/chartist.min.js"></script>
+
+    <script type="text/javascript" src="../js/controllers/app.js"></script>
+</head>
+
+<body ng-controller="zyloonAppCtrl">
+    <h1>Expense Form</h1>
+    <form name= 'zyloonform'  ng-submit='submitform()' novalidate>
+        <p>
+            Category:
+            <input type='text' name='category' ng-model='form.category'/>
+        </p>
+        <p>
+            Type:
+            <input type='radio' name='Type' ng-model='form.type' value='cash' />Cash
+            <input type='radio' name='Type' ng-model='form.type' value='credit'/>Credit
+        </p>
+        <p>
+            Amount:
+            <input type='text' name='Amount' ng-model='form.amount'/>
+        </p>
+        <p>
+            Date:
+            <input type='date' name='Date' ng-model='form.date'/>
+        </p>
+        <p>
+            <input type='submit' name='Submit' value='Submit'/>
+        </p>
+    </form>
+    <br>
+    lineData: {{lineData}}
+    <div class="ct-chart ct-perfect-fourth"></div>
+</body>
+</html>

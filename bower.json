@@ -1,0 +1,21 @@
+{
+  "name": "zyloon",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "vikashcool1991"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "^0.9.7"
+  }
+}
